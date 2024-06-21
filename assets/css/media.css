@@ -44,3 +44,28 @@
     font-size: 0.9em;
     color: #666;
 }
+
+@media (max-width: 1200px) {
+    .media-section .frame {
+        width: calc(33.333% - 20px); /* Three divs per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .media-section .frame {
+        width: calc(50% - 20px); /* Two divs per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .media-section .frame {
+        width: calc(100% - 20px); /* One div per row */
+    }
+}
+
+@media (max-width: 576px) {
+    .media-section .frame {
+        width: calc(100% - 20px); /* One div per row with increased margin */
+        margin: 15px 0; /* Adjust margin for smaller screens */
+    }
+}

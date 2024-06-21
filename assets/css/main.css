@@ -111,6 +111,8 @@ nav ul li a.active {
     border-radius: 5px;
 }
 
+/* BUTTONS */
+
 .inquiry-btn {
     background-color: #fff;
     border: 2px solid #d00;
@@ -262,32 +264,28 @@ nav ul li a.active {
 
 /* MEDIA REPONSIVE */
 
-.responsive-media {
+/* .responsive-media {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    padding-bottom: 56.25%; 
     height: 0;
     overflow: hidden;
-}
+} */
 
-.responsive-media iframe,
+/* .responsive-media iframe,
 .responsive-media img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-.about-content img {
-    max-width: 300px;
-    width: 100%;
-    border-radius: 10px;    
-}
+} */
 
 .about-text {
     flex: 1;
+    text-align: justify;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .about-us p {
@@ -354,7 +352,7 @@ nav ul li a.active {
 }
 
 .project img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     transition: transform 0.5s ease;
 }
@@ -665,12 +663,15 @@ footer {
     .nav-links {
         display: none;
         flex-direction: column;
-        gap: 0;
-        width: 100%;
-        background-color: #fff;
+        gap: 1;
+        width: 50%;
+        background-color: #ffffff;
         position: absolute;
-        top: 60px;
-        left: 0;
+        top: 64px;
+        left: 50%;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        border-bottom-left-radius: 50px;
     }
 
     .nav-links.open {
@@ -708,6 +709,20 @@ footer {
         margin: 20px 0;
     }
 
+    .stakeholders{
+        align-items: center;
+    }
+
+    .stakeholder-slider{
+        align-items: center;
+    }
+
+    .stakeholders h2 span {
+        align-items: center;
+        padding-left: 2%;
+        margin: 20px 0;
+    }
+
     .stakeholder-track {
         animation: slide 20s linear infinite;
     }
@@ -719,5 +734,36 @@ footer {
         100% {
             transform: translateX(-100%);
         }
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-content {
+        max-width: 1200px;
+    }
+
+    .projects-container {
+        padding-bottom: 40px;
+    }
+
+    .events-news-container {
+        justify-content: space-around;
+    }
+
+    .event-news {
+        width: calc(20% - 20px);
+    }
+
+    .footer-links {
+        width: 80%;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-links div {
+        margin: 0 40px;
     }
 }
